@@ -1,0 +1,254 @@
+/* INICIALIZAÇÃO DAS FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* VARIÁVEIS DE COR */
+:root {
+  --primary-color: #22212C;
+  --box-color: #302F3D;
+  --font-color: #837E9F;
+  --tec-colors: #CB92B1;
+}
+/* RESET DAS CONFIGURAÇÕES DO PROJETO */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color)
+}
+/* BACKGROUND GERAL DO PROJETO */
+body{
+  background: var(--primary-color);
+}
+/* CONFIGURAÇÕES INICIAIS DO CONTAINER */
+.container{
+  display: flex;  
+  margin: 40px;
+  gap: 40px;
+}
+/* CONFIGURAÇÕES INICIAIS DA BARRA LATERAL */
+.side-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* CONFIGURAÇÕES INICIAIS DAS CAIXAS DA BARRA LATERAL */
+.side-content-box{
+  background: var(--box-color);
+  width: 348px;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* CONFIGURAÇÃO DA PRIMEIRA CAIXA DA BARRA LATERAL */
+.box1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.box1 div{
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+/* CONFIGURAÇÕES DA SEGUNDA CAIXA DA BARRA LATERAL */
+.box2{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 30px;
+  gap: 15px;
+}
+.box2 p a{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  text-decoration: none;
+}
+/* CONFIGURAÇÕES DA TERCEIRA CAIXA DA BARRA LATERAL */
+.box3-grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 13px;
+  padding: 15px;
+}
+.box3-grid p{
+  background-color: var(--tec-colors);
+  color: #000;
+  border-radius: 20px;
+  padding: 3px;
+  font-size: 10px;
+  text-align: center;
+}
+/* CONFIGURAÇÕES DA QUARTA CAIXA DA BARRA LATERAL */
+.box4 h3{
+  padding-bottom: 15px;
+}
+.box4 ul{
+ margin-left:40px;
+}
+.box4 ul li{
+  font-weight: bold;
+ }
+ .box4 ul p{
+  font-size: 12px;
+  font-weight: 100;
+ }
+ /* CONFIGURAÇÕES DA QUINTA CAIXA DA BARRA LATERAL */
+ .box5 h3{
+  padding-bottom: 15px;
+}
+.box5 ul{
+ margin-left:40px;
+}
+.box5 ul li{
+  font-weight: bold;
+ }
+ .box5 ul p{
+  font-size: 12px;
+  font-weight: 100;
+ }
+ /* CONFIGURAÇÕES DO CONTEÚDO PRINCIPAL */
+.main-content-box{
+  background: var(--box-color);
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* CONFIGURAÇÕES GRID PARA ORGANIZAR O CONTEÚDO PRINCIPAL */
+.main-content-grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.item1{grid-area: 1 / span 4;
+  height: 86px;}
+.item2{grid-area: 2 / span 2}
+.item3{grid-area: 2 / span 2}
+.item4{grid-area: 3 / span 4;
+  height: 86px;}
+.item5{grid-area: 4 / span 4}
+
+/* CONFIRGURAÇÃO DOS CONTEUJDOS DAS CAIXAR DO MAIN CONTENT */
+.item1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.item1 a{
+  text-decoration: none;
+}
+.item2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item2 p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.item2 .under{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding-top: 50px;
+}
+.item2 .under .score{
+  display: flex;
+  gap: 10px;
+}
+.item2 .under .score p{
+  display: flex;
+  gap: 5px;
+}
+.item2 .under .skill p{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.item3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item3 p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.item3 .under{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding-top: 50px;
+}
+.item3 .under .score{
+  display: flex;
+  gap: 10px;
+}
+.item3 .under .score p{
+  display: flex;
+  gap: 5px;
+}
+.item3 .under .skill p{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.item4{
+  display: flex;
+  align-items: center;
+}
+.item5{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+ /* -----------------------MEDIA QUERIES------------------------ */
+@media (max-width: 955px){
+  .main-content-grid{
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  .item5{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  }
+  .item5 .main-exp div{
+    padding-top: 15px;
+  }
+  
+}
+@media (max-width: 688px){
+  .container{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .side-content-box{
+    background: var(--box-color);
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 425px){
+  .container{
+    flex-direction: column;
+    gap: 30px;
+}
+}
+
